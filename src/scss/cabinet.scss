@@ -1,0 +1,13 @@
+.cabinet {
+   background: url('@img/cabinet/bg.jpg') 50% 0 / cover no-repeat;
+   &__page {
+      display: none;
+      &._active-body {
+         display: block;
+      }
+   }
+
+   &__section {
+      margin-bottom: 40px;
+   }
+}

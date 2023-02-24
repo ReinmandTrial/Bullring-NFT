@@ -1,0 +1,149 @@
+//Fonst
+@import 'fonts/fonts';
+//Icon Fonst ==============================================================================================================================================================================================================================================================================
+@import 'fonts/icons';
+//Default Fonst==============================================================================================================================================================================================================================================================================
+$fontFamily: 'SF-Pro-Display';
+$fontSize: 18px;
+
+// Colors
+$mainColor: #ffffff;
+:root {
+   --white: #ffffff;
+   --black: #1a1a1a;
+   --yellow: #f0b90b;
+   --gray: #282828;
+}
+
+// ============================================================================================================================================================================================================================================================================================================================================================================================
+
+// NULL ============================================================================================================================================================================================== =============================================================================================== ===============================================================================================
+@import 'base/null.scss';
+
+//BODY ============================================================================================================================================================================================================================================================================================================================================================================================
+
+body {
+   .lock & {
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+   }
+   .loaded & {
+   }
+}
+
+//WRAPPER============================================================================================================================================================================================================================================================================================================================================================================================================================================
+.wrapper {
+   min-height: 100%;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   position: relative;
+   @supports (overflow: clip) {
+      overflow: clip;
+   }
+   @media (max-width: 991.98px) {
+      &::after {
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         background: linear-gradient(180deg, rgba(13, 63, 63, 0.4) 0%, rgba(0, 0, 0, 0) 100%);
+         backdrop-filter: blur(0px);
+         -webkit-backdrop-filter: blur(0px);
+         z-index: 100;
+         transition: all 0.3s ease 0s;
+         opacity: 0;
+         visibility: hidden;
+         .menu-open & {
+            visibility: visible;
+            transition: all 0.3s ease 0s;
+            opacity: 1;
+            backdrop-filter: blur(24.5px);
+            -webkit-backdrop-filter: blur(24.5px);
+         }
+      }
+   }
+
+   > main {
+      flex: 1 1 auto;
+   }
+   > * {
+      min-width: 0;
+   }
+}
+//CONTAINERS======================================================================================================================================================================================================================
+
+[class*='__container-l'] {
+   max-width: 1850px;
+   margin: 0 auto;
+   padding: 0px 15px;
+   height: 100%;
+}
+[class*='__container-m'] {
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0px 15px;
+   height: 100%;
+}
+
+//COMMON========================================================================================================================================================
+@import './ui/common.scss';
+//LANDING COMPONENTS========================================================================================================================================================
+@import './components/landing/landing-header.scss';
+@import './components/landing/landing-about.scss';
+@import './components/landing/landing-calc.scss';
+@import './components/landing/landing-audits.scss';
+@import './components/landing/landing-features.scss';
+@import './components/landing/landing-referral.scss';
+@import './components/landing/landing-download.scss';
+@import './components/landing/landing-footer.scss';
+@import './components/landing/landing-popup.scss';
+@import './components/landing/landing-slick-block.scss';
+//CABINET COMPONENTS========================================================================================================================================================
+@import './components/cabinet/cabinet-header.scss';
+@import './components/cabinet/cabinet-statistics.scss';
+@import './components/cabinet/cabinet-calc.scss';
+@import './components/cabinet/cabinet-active-deposits.scss';
+@import './components/cabinet/cabinet-refer-bonus.scss';
+@import './components/cabinet/cabinet-refer-statistics.scss';
+@import './components/cabinet/cabinet-refer-history.scss';
+@import './components/cabinet/cabinet-pagination.scss';
+@import './components/cabinet/cabinet-footer.scss';
+@import './components/cabinet/cabinet-popup.scss';
+//PAGES
+@import './landing.scss';
+@import './cabinet.scss';
+
+//Preview DEMO========================================================================================================================================================
+
+.preview-page {
+   min-height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(180deg, #1783b0 0%, rgba(220, 103, 238, 0) 112.95%);
+   &__list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+   }
+
+   &__item {
+      flex: 0 0 290px;
+      img {
+         max-width: 100%;
+      }
+      span {
+         display: block;
+         font-weight: 700;
+         font-size: 45px;
+         line-height: 54px;
+         text-align: center;
+         color: #1a1a1a;
+      }
+   }
+}

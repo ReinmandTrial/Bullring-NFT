@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+   @@include('components/_head.htm',{ "title":"Cabinet" })
+
+   <body>
+      <div class="wrapper">
+         @@include('components/_cabinet-header.htm',{})
+         <main class="cabinet">
+
+            <!--CabinetStatistics-->
+            @@include('components/_cabinet-statistics.htm',{})
+            <!--End CabinetStatistics-->
+
+            <!--CabinetHome-->
+            @@include('components/page-cabinet-home.htm',{})
+            <!--End CabinetHome-->
+
+            <!--CabinetPartners-->
+            @@include('components/page-cabinet-partners.htm',{})
+            <!--End CabinetPartners-->
+
+         </main>
+         @@include('components/_cabinet-footer.htm',{})
+      </div>
+      <!--CabinetPopup-->
+      @@include('components/_cabinet-popup.htm',{})
+      <!--End CabinetPopup-->
+   </body>
+</html>

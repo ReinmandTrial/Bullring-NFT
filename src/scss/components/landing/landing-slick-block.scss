@@ -1,0 +1,46 @@
+.slick-block {
+   position: fixed;
+   right: -26vh;
+   top: 50%;
+   z-index: 99;
+   width: 50vh;
+   height: auto;
+   transform: rotate(-90deg) translate(0, -50%);
+   @media (max-width: 991.98px) {
+      display: none;
+   }
+   &__content {
+      display: flex;
+      justify-content: center;
+      gap: 45px;
+      align-items: center;
+      width: 100%;
+      @media (max-width: 1300px) {
+         opacity: 0.3;
+         transition: all 0.3s ease 0s;
+         &:hover {
+            opacity: 1;
+            transition: all 0.3s ease 0s;
+         }
+      }
+   }
+
+   &__item {
+      background: linear-gradient(180deg, #006bff 0%, #49499c 112.95%);
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06);
+      gap: 20px;
+      max-width: 262px;
+      width: 100%;
+      min-width: 180px;
+      padding: 25px 10px;
+      i,
+      img {
+         flex: none;
+         font-size: 24px;
+         height: 24px;
+      }
+      ._icon-book {
+         transform: rotate(90deg);
+      }
+   }
+}

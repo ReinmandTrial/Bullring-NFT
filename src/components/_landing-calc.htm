@@ -1,0 +1,50 @@
+<section data-calc class="landing__section landing-calc">
+   <div class="landing-calc__container-m">
+      <h2 class="landing-calc__title border-title-text"><span>Our Plans</span><span>plans</span></h2>
+      <form class="landing-calc__content">
+         <div class="landing-calc__first-step-slider swiper">
+            <!--Daily-profit-->
+            @@include('./UI-daily-profit.htm',{"wrapClass":"landing-calc__first-step swiper-wrapper","slideClass":"swiper-slide" })
+            <!--End Daily-profit-->
+            <div class="landing-calc__first-step-slider-bullets"></div>
+         </div>
+         <div class="landing-calc__second-third-steps">
+            <div data-comp class="landing-calc__second-step landing-second-step">
+               <div class="landing-second-step__input landing-calc-input">
+                  <input data-comp-val type="text" value="30" required id="landingCompaunding" class="landing-calc-input__input" type="number" />
+                  <label class="landing-calc-input__label" for="landingCompaunding">Compaunding</label>
+               </div>
+               <div class="landing-second-step__compaunding">
+                  <!--Compaunding-->
+                  @@include('./UI-compaunding.htm',{})
+                  <!--End Compaunding-->
+               </div>
+            </div>
+            <div class="landing-calc__third-step landing-third-step">
+               <div class="landing-third-step__col">
+                  <div class="landing-third-step__input landing-calc-input">
+                     <input data-invest-sum value='100' required id="landingTotal" class="landing-calc-input__input" type="number" />
+                     <label class="landing-calc-input__label" for="landingTotal">Total invest</label>
+                  </div>
+                  <div class="landing-third-step__suggest-values">
+                     <button type="button" class="landing-third-step__suggest-val">50</button>
+                     <button type="button" class="landing-third-step__suggest-val">200</button>
+                     <button type="button" class="landing-third-step__suggest-val">500</button>
+                     <button type="button" class="landing-third-step__suggest-val">1000</button>
+                  </div>
+               </div>
+               <div class="landing-third-step__col">
+                  <button type="button" class="landing-third-step__button button"><span>Make deposit</span></button>
+               </div>
+            </div>
+         </div>
+         <!-- Income-->
+         @@include('./UI-income.htm',{"wrapClass": "landing-calc__income"})
+         <!--End Income -->
+         <button data-popup="comissionsPopup" type="button" class="landing-calc__comissions button">
+            <i class="_icon-hand"></i>
+            <span>Comissions</span>
+         </button>
+      </form>
+   </div>
+</section>

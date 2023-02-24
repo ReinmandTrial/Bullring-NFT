@@ -1,0 +1,35 @@
+//AnimationCopiedButton========================================================================================================================================================
+@keyframes copied {
+   0% {
+      transform: translate(-50%, -50%) rotate(0deg) scale(1.5);
+   }
+   100% {
+      transform: translate(-50%, -50%) rotate(360deg) scale(1.5);
+   }
+   0% {
+      transform: translate(-50%, -50%) rotate(0deg) scale(1.5);
+   }
+}
+
+@keyframes earth {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+   0% {
+      transform: rotate(0deg);
+   }
+}
+@keyframes earthOut {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(-360deg);
+   }
+   0% {
+      transform: rotate(0deg);
+   }
+}

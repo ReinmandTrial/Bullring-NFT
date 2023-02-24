@@ -1,0 +1,65 @@
+<header class="cabinet-header">
+   <div class="cabinet-header__container-l">
+      <div class="cabinet-header__content">
+         <div class="cabinet-header__body">
+            <nav class="cabinet-header__menu cabinet-menu">
+               <button data-nav-cabinet-btn="1" data-goto-top="20" data-goto="#cabinetHome" type="button" class="cabinet-menu__item _active-nav">
+                  <i class="_icon-home"></i>
+                  <span>Home</span>
+               </button>
+               <button data-nav-cabinet-btn="2" data-goto-top="20" data-goto="#cabinetPartners" type="button" class="cabinet-menu__item">
+                  <i class="_icon-partners"></i>
+                  <span>My Partners</span>
+               </button>
+            </nav>
+            <div class="cabinet-header__logo-box">
+               <a href="./index.html" class="cabinet-header__logo">
+                  <img src='@img/1px.png' data-src="@img/logo.svg" alt="logo" />
+               </a>
+            </div>
+            <div class="cabinet-header__social-links social-links">
+               <!--Social-links-->
+               @@include('./UI-social-links.htm',{})
+               <!--End Social-links-->
+            </div>
+            <div class="cabinet-header__user-info user-info">
+               <div class="user-info__wallet wallet-balance">
+                  <span class="wallet-balance__title">Wallet Ballance</span>
+                  <span class="wallet-balance__value">0.000 BNB</span>
+               </div>
+               <div class="user-info__logout logout-block">
+                  <p class="logout-block__wallet-id">0x3foda0x3foda0x3foda0x3foda0x3foda0x3foda0x3foda0x3foda0x3foda</p>
+                  <button type="button" class="logout-block__exit-btn">
+                     <i class="_icon-logout"></i>
+                     <span>Exit</span>
+                  </button>
+               </div>
+               <!-- <div class="user-info__dropdown user-dropdown">
+                  <button type="button" class="user-dropdown__head">
+                     <i class="_icon-user"></i>
+                  </button>
+                  <div class="user-dropdown__body"></div>
+               </div> -->
+            </div>
+         </div>
+         <div class="cabinet-header__mobile-header cabinet-mobile-header">
+            <div class="cabinet-mobile-header__content">
+               <div class="cabinet-mobile-header__wallet wallet-balance">
+                  <span class="wallet-balance__title">Wallet Ballance</span>
+                  <span class="wallet-balance__value">0.000 BNB</span>
+               </div>
+               <div class="cabinet-mobile-header__dropdown user-dropdown">
+                  <button type="button" class="user-dropdown__head">
+                     <i class="_icon-user"></i>
+                  </button>
+                  <div class="user-dropdown__body"></div>
+               </div>
+            </div>
+            <button type="button" class="cabinet-mobile-header__burger icon-menu">
+               <img src='@img/1px.png' class="icon-menu__close" data-src="@img/burger-close.svg" alt="menu-close" />
+               <img src='@img/1px.png' class="icon-menu__open" data-src="@img/burger-open.svg" alt="menu-open" />
+            </button>
+         </div>
+      </div>
+   </div>
+</header>

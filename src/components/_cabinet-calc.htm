@@ -1,0 +1,38 @@
+<section data-calc class="cabinet__section calc">
+   <div class="calc__container-l">
+      <form class="calc__content">
+         <div class="calc__step">
+            <h3 class="calc__step-title"><span>Step</span><span>1</span></h3>
+            <!--Daily-profit-->
+            @@include('./UI-daily-profit.htm',{"wrapClass":"calc__step-content","slideClass":""})
+            <!--End Daily-profit-->
+         </div>
+         <div class="calc__step">
+            <h3 class="calc__step-title"><span>Step</span><span>2</span></h3>
+            <div data-comp class="calc__step-content second-step">
+               <input data-comp-val type="text" value="30" class="second-step__input" />
+               <div class="second-step__compaunding">
+                  <!--Compaunding-->
+                  @@include('./UI-compaunding.htm',{})
+                  <!--End Compaunding-->
+               </div>
+            </div>
+         </div>
+         <div class="calc__step">
+            <h3 class="calc__step-title"><span>Step</span><span>3</span></h3>
+            <div class="calc__step-content third-step">
+               <div class="third-step__input-block">
+                  <input data-invest-sum class="third-step__input" type="number" value="100" />
+                  <i class="_icon-busd"></i>
+               </div>
+               <button type="button" class="third-step__btn"><span>Сreate a deposit</span></button>
+            </div>
+         </div>
+      </form>
+
+      <h3 class="calc__income-title">Projected Income</h3>
+      <!--Income-->
+      @@include('./UI-income.htm',{"wrapClass": "calc__income"})
+      <!--End Income-->
+   </div>
+</section>
